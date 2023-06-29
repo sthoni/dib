@@ -21,7 +21,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
       <article>
         {heroImage && <img src={heroImage} alt="" />}
         <h1 class="title">{title}</h1>
-        <FormattedDate date={pubDate} />
+        Erstellt am <FormattedDate date={pubDate} />
         {
           updatedDate && (
             <div class="last-updated-on">
@@ -29,7 +29,6 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
             </div>
           )
         }
-        <hr />
         <slot />
       </article>
     </main>
